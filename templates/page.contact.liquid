@@ -1,0 +1,15 @@
+<section class="container mx-auto my-8 px-4">
+    <h1 class="text-3xl font-bold">Contact Us</h1>
+    <form action="/contact" method="post" class="mt-4">
+        <label for="name" class="block text-gray-700">Your Name</label>
+        <input type="text" id="name" name="contact[name]" class="border rounded w-full p-2 mt-2">
+        
+        <label for="email" class="block text-gray-700 mt-4">Your Email</label>
+        <input type="email" id="email" name="contact[email]" class="border rounded w-full p-2 mt-2">
+        
+        <label for="message" class="block text-gray-700 mt-4">Your Message</label>
+        <textarea id="message" name="contact[body]" class="border rounded w-full p-2 mt-2"></textarea>
+        
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded mt-4">Send Message</button>
+    </form>
+</section>

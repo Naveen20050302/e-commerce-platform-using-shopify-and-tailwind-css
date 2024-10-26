@@ -1,0 +1,17 @@
+<div class="cart">
+    <h2 class="text-xl font-bold">Your Cart</h2>
+    {% if cart.item_count == 0 %}
+        <p>Your cart is currently empty.</p>
+    {% else %}
+        <ul>
+            {% for item in cart.items %}
+                <li class="flex justify-between items-center">
+                    <span>{{ item.quantity }} x {{ item.title }}</span>
+                    <span>{{ item.line_price | money }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <p class="font-bold mt-4">Total: {{ cart.total_price | money }}</p>
+        <a href="/cart" class="bg-blue-500 text-white py-2 px-4 rounded">View Cart</a>
+    {% endif %}
+</div>
